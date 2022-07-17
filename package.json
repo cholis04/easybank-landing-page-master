@@ -1,0 +1,20 @@
+{
+  "name": "easybank-landing-page-master",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "parcel src/*.html --open",
+    "build": "parcel build src/*.html --no-source-maps"
+  },
+  "license": "ISC",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.6.2",
+    "@typescript-eslint/eslint-plugin": "^5.30.6",
+    "@typescript-eslint/parser": "^5.30.6",
+    "eslint": "^8.20.0",
+    "eslint-config-prettier": "^8.5.0",
+    "parcel": "^2.6.2",
+    "prettier": "2.7.1"
+  }
+}
