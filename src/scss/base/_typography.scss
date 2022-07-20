@@ -1,0 +1,29 @@
+// Import Public Sans Font from https://fonts.google.com/
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&display=swap');
+
+// Font
+body,
+button,
+input,
+textarea {
+  font-family: 'Public Sans', sans-serif;
+}
+
+// Body Copy
+body {
+  font-size: 1.125em;
+}
+
+// Line Height
+p,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+textarea,
+button {
+  line-height: 1.8;
+}
