@@ -1,7 +1,21 @@
+// Vendors
 @use './vendors/normalize.scss';
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+// Base
+@use './base/reset';
+@use './base/typography';
+
+// Shared Layouts
+@use './layouts/navbar';
+@use './layouts/footer';
+
+// Layouts
+@use './layouts/home_main';
+@use './layouts/home_mainBanner';
+@use './layouts/home_mainFeature';
+@use './layouts/home_aside';
+
+// Global Components
+@use './components/featureCard';
+@use './components/articleCard';
+@use './components/requestButton';
