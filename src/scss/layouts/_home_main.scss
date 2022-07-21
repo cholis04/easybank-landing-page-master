@@ -1,0 +1,17 @@
+@use '../utils/variables' as var;
+@use '../utils/mixins' as mix;
+
+.home_main {
+  margin-top: var.$nav-height;
+
+  &__wrapper {
+    @include mix.wrapper;
+  }
+}
+
+// Desktop
+@media only screen and (min-width: 768px) {
+  .home_main {
+    margin-top: calc(var.$nav-height + 1rem);
+  }
+}
