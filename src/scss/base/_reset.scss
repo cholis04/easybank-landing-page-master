@@ -1,5 +1,26 @@
-* {
+// Margin, Padding and Box Sizing
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+// Font Smooth
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Color
+p,
+a {
+  color: inherit;
+}
+
+// Display Block and Max Witdth 100% Img
+img {
+  display: block;
+  max-width: 100%;
 }
