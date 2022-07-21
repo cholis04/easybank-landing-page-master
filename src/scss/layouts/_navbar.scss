@@ -2,6 +2,8 @@
 @use '../utils/mixins' as mix;
 
 .navbar {
+  @include mix.boxShadow;
+
   background-color: var.$eclr-surface;
   height: var.$nav-height;
   position: fixed;

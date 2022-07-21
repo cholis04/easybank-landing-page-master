@@ -12,3 +12,18 @@
     padding: 0 2.2rem;
   }
 }
+
+// Box Shadow
+@mixin boxShadow(
+  $offsetX: 1px,
+  $offsetY: 1px,
+  $blur: 25px,
+  $spread: 0,
+  $color: rgba(0, 0, 0, 0.1)
+) {
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  // box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: $offsetX $offsetY $blur $spread $color;
+  -moz-box-shadow: $offsetX $offsetY $blur $spread $color;
+  box-shadow: $offsetX $offsetY $blur $spread $color;
+}
