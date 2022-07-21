@@ -1,0 +1,104 @@
+@use '../utils/mixins' as mix;
+@use '../utils/variables' as var;
+
+.home_mainBanner {
+  background-color: var.$eclr-background;
+  background-image: url('../assets/backgrounds/bg-intro-mobile.svg');
+  background-repeat: no-repeat;
+
+  background-position: 0 -4rem;
+  background-size: contain;
+
+  &__wrapper {
+    @include mix.wrapper;
+
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  &__intro {
+    text-align: center;
+  }
+
+  &__title {
+    margin-top: 2.1rem;
+    margin-bottom: 0;
+    font-size: 2.49rem;
+    line-height: normal;
+    letter-spacing: -0.7;
+    font-weight: var.$fw-reguler;
+    color: var.$eclr-text-primary;
+  }
+
+  &__paragraph {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: var.$eclr-text-secondary;
+    font-weight: var.$fw-reguler;
+  }
+
+  &__cta {
+    margin-top: 2rem;
+  }
+
+  &__imageWrapper {
+    order: -1;
+  }
+
+  &__heroImage {
+    transform: scale(1.056);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -7rem;
+  }
+}
+
+// Desktop
+@media only screen and (min-width: 768px) {
+  .home_mainBanner {
+    background-image: url('../assets/backgrounds/bg-intro-desktop.svg');
+    background-size: 83%;
+    background-position: 41.6rem -16.12rem;
+
+    &__wrapper {
+      min-height: 41rem;
+      padding-top: 3.6rem;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+    }
+
+    &__intro {
+      margin-top: -5.7rem;
+      text-align: left;
+    }
+
+    &__title {
+      font-weight: var.$fw-light;
+      margin-top: 0;
+      padding-right: 2rem;
+      font-size: 3.5rem;
+      line-height: 1.15;
+      letter-spacing: -0.8;
+    }
+
+    &__paragraph {
+      margin-top: 1.5rem;
+      padding-right: 7rem;
+      font-size: 1em;
+      line-height: 1.6;
+      letter-spacing: -0.3;
+    }
+    &__cta {
+      margin-top: 2.2rem;
+    }
+
+    &__imageWrapper {
+      order: unset;
+    }
+    &__heroImage {
+      transform: scale(1.38);
+      margin-left: 11.9rem;
+      margin-top: -3.1rem;
+    }
+  }
+}

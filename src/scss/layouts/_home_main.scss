@@ -1,12 +1,7 @@
 @use '../utils/variables' as var;
-@use '../utils/mixins' as mix;
 
 .home_main {
   margin-top: var.$nav-height;
-
-  &__wrapper {
-    @include mix.wrapper;
-  }
 }
 
 // Desktop
