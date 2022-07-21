@@ -1,3 +1,5 @@
+// Variables
+
 // Main Theme Color
 $clr-primary: hsl(136, 65%, 51%);
 $clr-secondary: hsl(192, 70%, 51%);
@@ -21,3 +23,8 @@ $fw-reguler: 400;
 $fw-medium: 500;
 $fw-semibold: 600;
 $fw-bold: 700;
+
+// Fixed Size:
+$max-width: 1180px;
+$min-width: 375px;
+$nav-height: 5rem;
