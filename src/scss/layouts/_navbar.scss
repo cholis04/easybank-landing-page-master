@@ -1,0 +1,141 @@
+@use '../utils/variables' as var;
+@use '../utils/mixins' as mix;
+
+.navbar {
+  background-color: var.$eclr-surface;
+  height: var.$nav-height;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  &__wrapper {
+    @include mix.wrapper;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: inherit;
+  }
+
+  &__cta {
+    display: none;
+  }
+
+  &__toggleMenu {
+    border: none;
+    background: none;
+  }
+
+  &__closeIcon {
+    padding-top: 0.4rem;
+    padding-right: 0.2rem;
+  }
+
+  &__menu {
+    position: relative;
+  }
+
+  &__overlay {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: var.$nav-height;
+    left: 0;
+    background: linear-gradient(
+      180deg,
+      var.$clr-tertiary 20%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
+
+  &__menulist {
+    position: fixed;
+    z-index: 999;
+    top: calc(1.5rem + var.$nav-height);
+    left: 50%;
+    width: 87%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+    background-color: var.$eclr-surface;
+    list-style-type: none;
+    padding: 1.2rem 0;
+
+    & > li {
+      text-align: center;
+      padding: 0.4rem 0.2rem;
+
+      & > a {
+        display: block;
+        color: var.$eclr-text-primary;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+// Desktop
+@media only screen and (min-width: 768px) {
+  .navbar {
+    height: calc(var.$nav-height + 1rem);
+
+    &__logoWrapper {
+      padding-top: 0.3rem;
+    }
+
+    &__overlay {
+      display: none;
+    }
+    &__toggleMenu {
+      display: none;
+    }
+
+    &__cta {
+      display: block;
+    }
+
+    &__menulist {
+      margin-left: 1.6rem;
+
+      position: static;
+      z-index: unset;
+
+      top: unset;
+      left: unset;
+      width: auto;
+      transform: unset;
+      border-radius: unset;
+      background: unset;
+      list-style-type: none;
+      padding: unset;
+
+      display: flex;
+      justify-content: center;
+
+      & > li {
+        text-align: unset;
+        padding: unset;
+
+        margin: 0 0.7rem;
+
+        & > a {
+          display: inline-block;
+          color: var.$eclr-text-secondary;
+          font-size: 0.875rem;
+          padding: 1.4rem 0;
+          border: 4px solid transparent;
+          transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+
+          @media (hover: hover) {
+            /* when supported */
+            &:hover {
+              border-bottom: 4px solid var.$clr-primary;
+              color: var.$eclr-text-primary;
+            }
+          }
+        }
+      }
+    }
+  }
+}

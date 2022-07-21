@@ -1,0 +1,20 @@
+@use '../utils/variables' as var;
+
+.requestButton {
+  border: none;
+  font-size: 0.875rem;
+  font-weight: var.$fw-medium;
+  color: white;
+  padding: 0.6rem 2.2rem;
+  border-radius: 2rem;
+  background: linear-gradient(to right, var.$clr-primary, var.$clr-secondary);
+  transition: all 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+  @media (hover: hover) {
+    /* when supported */
+    &:hover {
+      cursor: pointer;
+      opacity: 0.6;
+    }
+  }
+}
