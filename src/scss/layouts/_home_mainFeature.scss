@@ -12,17 +12,17 @@
   }
 
   &__title {
+    @include mix.headingText;
+
     font-size: 2rem;
     letter-spacing: -0.6;
     line-height: normal;
-    font-weight: var.$fw-light;
-    color: var.$eclr-text-primary;
   }
 
   &__paragraph {
+    @include mix.bodyText;
+
     margin-top: 1rem;
-    color: var.$eclr-text-secondary;
-    font-weight: var.$fw-reguler;
     font-size: 0.8em;
   }
 

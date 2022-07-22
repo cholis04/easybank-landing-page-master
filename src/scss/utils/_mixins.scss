@@ -27,3 +27,15 @@
   -moz-box-shadow: $offsetX $offsetY $blur $spread $color;
   box-shadow: $offsetX $offsetY $blur $spread $color;
 }
+
+// Heaading Text
+@mixin headingText {
+  font-weight: var.$fw-reguler;
+  color: var.$eclr-text-primary;
+}
+
+// Body Text
+@mixin bodyText {
+  color: var.$eclr-text-secondary;
+  font-weight: var.$fw-reguler;
+}
