@@ -1,0 +1,43 @@
+@use '../utils/variables' as var;
+
+.featureCard {
+  &__icon {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__title {
+    margin-top: 1.3rem;
+    font-size: 1.13em;
+    letter-spacing: -0.6;
+    font-weight: var.$fw-light;
+    color: var.$eclr-text-primary;
+    line-height: normal;
+  }
+
+  &__paragraph {
+    margin-top: 1.4rem;
+    color: var.$eclr-text-secondary;
+    font-size: 0.8em;
+  }
+}
+
+// Tablet
+@media only screen and (min-width: 768px) {
+  .featureCard {
+    &__icon {
+      justify-content: flex-start;
+    }
+
+    &__title {
+      margin-top: 2.5rem;
+      font-size: 1.35em;
+    }
+
+    &__paragraph {
+      margin-top: 1.6rem;
+      line-height: 1.7;
+      font-size: 0.86em;
+    }
+  }
+}

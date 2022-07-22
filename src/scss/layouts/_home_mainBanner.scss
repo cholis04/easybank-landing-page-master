@@ -18,6 +18,7 @@
 
   &__intro {
     text-align: center;
+    margin-bottom: 5.4rem;
   }
 
   &__title {
@@ -53,7 +54,7 @@
   }
 }
 
-// Desktop
+// Tablet
 @media only screen and (min-width: 768px) {
   .home_mainBanner {
     background-image: url('../assets/backgrounds/bg-intro-desktop.svg');
@@ -70,6 +71,7 @@
     &__intro {
       margin-top: -5.7rem;
       text-align: left;
+      margin-bottom: unset;
     }
 
     &__title {
