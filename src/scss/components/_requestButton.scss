@@ -14,12 +14,17 @@
     color: var.$clr-primary;
     opacity: 1 !important;
   }
+}
 
-  @media (hover: hover) {
-    /* when supported */
-    &:hover {
-      cursor: pointer;
-      opacity: 0.6;
+// Tablet
+@media only screen and (min-width: 768px) {
+  .requestButton {
+    @media (hover: hover) {
+      /* when supported */
+      &:hover {
+        cursor: pointer;
+        opacity: 0.6;
+      }
     }
   }
 }
