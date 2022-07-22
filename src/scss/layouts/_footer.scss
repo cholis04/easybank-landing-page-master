@@ -1,0 +1,141 @@
+@use '../utils/variables' as var;
+@use '../utils/mixins' as mix;
+
+.footer {
+  background-color: var.$clr-tertiary;
+  padding: 2.4rem 0;
+
+  text-align: center;
+
+  &__wrapper {
+    @include mix.wrapper;
+  }
+
+  //   Footer Connect
+  &__logoWrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__sociallinks {
+    margin-top: 2.1rem;
+    list-style-type: none;
+
+    display: flex;
+    justify-content: center;
+
+    & > li {
+      margin: 0 0.6rem;
+    }
+
+    & > li > a > svg {
+      transform: scale(1.2);
+    }
+  }
+
+  //   Footer Navigation / Links
+  &__navigation {
+    margin-top: 1.4rem;
+  }
+
+  &__navlinks {
+    list-style-type: none;
+
+    & > li {
+      margin-bottom: 0.6rem;
+    }
+
+    & > li > a {
+      font-size: 0.8em;
+      color: white;
+      text-decoration: none;
+      transition: all 0.2s ease-in-out;
+    }
+    & > li > a:active {
+      text-decoration: underline;
+    }
+  }
+
+  //   Footer Notice
+  &__notice {
+    margin-top: 1.7rem;
+  }
+
+  &__copy {
+    margin: 1.4rem auto;
+    font-size: 0.8em;
+    color: var.$eclr-text-secondary;
+  }
+}
+
+// Tablet
+@media only screen and (min-width: 768px) {
+  .footer {
+    &__wrapper {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    //   Footer Connect
+    &__logoWrapper {
+      margin-top: 0.6rem;
+      justify-content: flex-start;
+    }
+
+    &__sociallinks {
+      margin-top: 3.3rem;
+      justify-content: flex-start;
+
+      & > li {
+        margin: unset;
+        margin-right: 0.8rem;
+      }
+
+      & > li > a > svg {
+        transform: scale(1);
+      }
+
+      @media (hover: hover) {
+        & > li > a > svg:hover > path {
+          transition: all 0.2s ease-in-out;
+          fill: var.$clr-primary;
+        }
+      }
+    }
+
+    //   Footer Navigation / Links
+    &__navigation {
+      margin-top: unset;
+      flex-grow: 1;
+      display: flex;
+    }
+
+    &__navlinks {
+      text-align: left;
+      margin-top: 0.7rem;
+      margin-left: 7.4rem;
+      margin-right: 0.6rem;
+
+      & > li {
+        margin-bottom: 0.5rem;
+      }
+
+      @media (hover: hover) {
+        /* when supported */
+        & > li > a:hover {
+          cursor: pointer;
+          color: var.$clr-primary;
+        }
+      }
+    }
+
+    //   Footer Notice
+    &__notice {
+      margin-top: 0.6rem;
+      text-align: right;
+    }
+    &__copy {
+      margin-bottom: unset;
+    }
+  }
+}
