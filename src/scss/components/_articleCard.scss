@@ -1,0 +1,67 @@
+@use '../utils/variables' as var;
+@use '../utils/mixins' as mix;
+
+.articleCard {
+  @include mix.boxShadow;
+
+  background-color: var.$eclr-surface;
+  border-radius: 0.4rem;
+  overflow: hidden;
+  padding-bottom: 2.5rem;
+
+  &__thumbnail {
+    & > img {
+      width: 100%;
+      height: 12.5rem;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__writter {
+    @include mix.bodyText;
+    padding: 0 1.875rem;
+
+    margin-top: 1.7rem;
+    font-size: 0.52em;
+    letter-spacing: 0.2;
+  }
+
+  &__title {
+    @include mix.headingText;
+    padding: 0 1.875rem;
+
+    margin-top: 0.5rem;
+    font-size: 0.9em;
+    line-height: 1.2;
+    letter-spacing: -0.4;
+  }
+
+  &__contents {
+    @include mix.bodyText;
+    padding: 0 1.875rem;
+
+    margin-top: 0.6rem;
+    font-size: 0.7em;
+    line-height: 1.4;
+  }
+}
+
+// Tablet
+@media only screen and (min-width: 768px) {
+  .articleCard {
+    padding-bottom: 1.7rem;
+
+    &__writter {
+      padding: 0 1.5rem;
+    }
+
+    &__title {
+      padding: 0 1.5rem;
+    }
+
+    &__contents {
+      padding: 0 1.5rem;
+    }
+  }
+}
