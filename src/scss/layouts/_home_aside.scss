@@ -3,7 +3,8 @@
 
 .home_aside {
   background-color: var.$eclr-background;
-  padding: 4.8rem 0;
+  padding-top: 4.8rem;
+  padding-bottom: 6.4rem;
 
   &__wrapper {
     @include mix.wrapper;
