@@ -30,11 +30,20 @@
   &__title {
     @include mix.headingText;
     padding: 0 1.875rem;
-
     margin-top: 0.5rem;
-    font-size: 0.9em;
+
     line-height: 1.2;
-    letter-spacing: -0.4;
+    font-size: 0.9em;
+    letter-spacing: -0.5;
+
+    & > a {
+      font-size: inherit;
+      line-height: inherit;
+      letter-spacing: inherit;
+
+      text-decoration: none;
+      transition: all 0.2s ease-in-out;
+    }
   }
 
   &__contents {
@@ -58,6 +67,13 @@
 
     &__title {
       padding: 0 1.5rem;
+
+      @media (hover: hover) {
+        & > a:hover {
+          /* when supported */
+          color: var.$clr-primary;
+        }
+      }
     }
 
     &__contents {
