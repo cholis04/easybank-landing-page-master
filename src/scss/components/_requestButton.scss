@@ -5,14 +5,15 @@
   font-size: 0.875rem;
   font-weight: var.$fw-medium;
   color: white;
-  padding: 0.6rem 2.2rem;
+  padding: 0.475rem 2.075rem;
   border-radius: 2rem;
   background: linear-gradient(to right, var.$clr-primary, var.$clr-secondary);
+  border: 0.125rem solid transparent;
 
   &:active {
-    background: var.$clr-tertiary;
+    background: none !important;
     color: var.$clr-primary;
-    opacity: 1 !important;
+    border: 0.125rem solid var.$clr-primary;
   }
 }
 
@@ -23,7 +24,11 @@
       /* when supported */
       &:hover {
         cursor: pointer;
-        opacity: 0.6;
+        background: linear-gradient(
+          to right,
+          hsl(140, 62%, 70%),
+          hsl(188, 64%, 69%)
+        );
       }
     }
   }
