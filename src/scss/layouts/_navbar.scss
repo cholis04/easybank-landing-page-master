@@ -97,7 +97,7 @@
   }
 }
 
-// Desktop
+// Tablet
 @media only screen and (min-width: 768px) {
   .navbar {
     height: calc(var.$nav-height + 1rem);
@@ -140,7 +140,7 @@
         text-align: unset;
         padding: unset;
 
-        margin: 0 0.7rem;
+        margin: 0 3%;
 
         & > a {
           display: inline-block;
@@ -158,6 +158,17 @@
             }
           }
         }
+      }
+    }
+  }
+}
+
+// Desktop
+@media only screen and (min-width: 1024px) {
+  .navbar {
+    &__menulist {
+      & > li {
+        margin: 0 0.7rem;
       }
     }
   }
